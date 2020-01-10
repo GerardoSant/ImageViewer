@@ -17,18 +17,23 @@ public class MainFrame extends JFrame{
 
     public MainFrame(SwingImageDisplay imageDisplay) {
         this.imageDisplay = imageDisplay;
-        setSize(800, 600);
         commands = new CommandFactory(imageDisplay).build();
-        buttons = new HashMap();
         initButtons();
         setLayout(new BorderLayout());
-        this.add(buttonsBar(), BorderLayout.SOUTH);
-        this.add(imageDisplay, BorderLayout.CENTER);
+        add(buttonsBar(), BorderLayout.SOUTH);
+        add(imageDisplay, BorderLayout.CENTER);
+        setFrameSettings();
+    }
+
+    private void setFrameSettings() {
+        setTitle("Image Viewer");
+        setSize(800, 600);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     private void initButtons() {
+        buttons = new HashMap();
         buttons.put("Next", ">");
         buttons.put("Prev", "<");
         buttons.put("Exit", "Exit");
@@ -45,9 +50,8 @@ public class MainFrame extends JFrame{
         return panel;
     }
 
-
     public void execute(){
-        this.setVisible(true);
+        setVisible(true);
     }
 
 
