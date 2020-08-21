@@ -16,4 +16,4 @@ Backend
 
 ## Preview
 
-![alt-text](https://github.com/GerardoSant/MoneyCalculatorIS2/blob/master/gifs/preview.gif)
+![alt-text](https://github.com/GerardoSant/ImageViewer/blob/master/gif/preview.gif)
